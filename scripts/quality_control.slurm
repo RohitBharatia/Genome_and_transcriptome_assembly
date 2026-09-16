@@ -6,6 +6,8 @@
 #SBATCH --mem=10G
 #SBATCH --cpus-per-task=4
 #SBATCH --partition=pshort_el8
+#SBATCH --mail-user=rohit.bharatia@students.unibe.ch
+#SBATCH --mail-type=end
 
 #alternate partion used for process as pibu_el8 was overloaded.
 
