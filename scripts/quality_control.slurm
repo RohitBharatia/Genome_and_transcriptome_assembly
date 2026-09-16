@@ -5,7 +5,7 @@
 #SBATCH --time=01:00:00
 #SBATCH --mem=10G
 #SBATCH --cpus-per-task=4
-#SBATCH --partition=pibu_el8
+#SBATCH --partition=psho_el8
 
 #INPUT VARIABLE
 #Sample_Directory = "${1:-Anz-0}"
