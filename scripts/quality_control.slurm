@@ -5,7 +5,9 @@
 #SBATCH --time=01:00:00
 #SBATCH --mem=10G
 #SBATCH --cpus-per-task=4
-#SBATCH --partition=psho_el8
+#SBATCH --partition=pshort_el8
+
+#alternate partion used for process as pibu_el8 was overloaded.
 
 #INPUT VARIABLE
 #Sample_Directory = "${1:-Anz-0}"
