@@ -16,15 +16,6 @@ INPUT_DIR="/data/users/rbharatia/Genome_transcriptome_assembly/data/Anz-0"
 OUTPUT_DIR="/data/users/rbharatia/Genome_transcriptome_assembly/results/quality_control"
 PACBIO_FASTQ="${INPUT_DIR}/ERR11437354.fastq.gz"
 
-#apptainer exec --bind /data ${CONTAINER} jellyfish count \
-#    -C -m 21 -s 5G -t 4 -o ${OUTPUT_DIR}/reads.jf \
-#    <(zcat ${INPUT_DIR}/*)
-
-#apptainer exec --bind /data ${CONTAINER} jellyfish histo \
-#    -t 4 ${OUTPUT_DIR}/reads.jf > ${OUTPUT_DIR}/reads.histo
-
-#echo "Task complete!"
-
 
 apptainer exec --bind /data $CONTAINER jellyfish count \
     -C -m 21 \
