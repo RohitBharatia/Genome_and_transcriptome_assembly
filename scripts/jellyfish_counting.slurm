@@ -14,9 +14,11 @@
 CONTAINER="/containers/apptainer/jellyfish-2.2.6--0.sif"
 INPUT_DIR="/data/users/rbharatia/Genome_transcriptome_assembly/data/Anz-0"
 OUTPUT_DIR="/data/users/rbharatia/Genome_transcriptome_assembly/results/quality_control"
-PACBIO_FASTQ="${INPUT_DIR}/ERR11437354.fastq.gz"
+PACBIO_FASTQ="${INPUT_DIR}/*.fastq.gz"
 
-
+# -s 5G: This option sets the size of the hash table used by Jellyfish to count k-mers. In this case, it is set to 5 gigabytes (GB). The hash table is a data structure that stores the k-mers and their counts. A larger hash table can accommodate more unique k-mers, which is important for large datasets or when using larger k-mer sizes.
+# -C: This option tells Jellyfish to count both the k-mers and their reverse complements. In DNA sequences, a k-mer and its reverse complement are considered equivalent because they represent the same sequence in opposite orientations. By counting both, you get a more accurate representation of the k-mer frequencies in the dataset.
+# -m: This option specifies the length of the k-mers to be counted. In this case, it is set to 21, meaning that Jellyfish will count all unique sequences of 21 nucleotides (k-mers) in the input reads.
 apptainer exec --bind /data $CONTAINER jellyfish count \
     -C -m 21 \
     -s 5G \
