@@ -4,11 +4,11 @@ This is the repository for the semester project for the Genome and Transcriptome
 ## Organisational matters
 #### Scripts:
 Scripts are housed in the /scripts directory. 
-Most scripts use containers housed on the unibe cluster.
+Most scripts use containers housed on the unibe cluster. Trinity is used as a module, also available on the unibe cluster.
 #### Data: 
-Data is soft linked to the course data directory. For the course I am assigned to use the Azn-0 sample.Reference to brassicales_odb10 lineage. 
+Data is soft linked to the course data directory. For the course I am assigned to use the Azn-0 sample. Reference to brassicales_odb10 lineage. 
 #### Tools
-Tools are listed below and were used as apptainers on the unibe HPC system.
+Tools are listed below and were used as apptainers/modules on the unibe HPC system.
 
 
 

@@ -14,4 +14,10 @@ module add Trinity/2.15.1-foss-2021a
 INPUT_DIR="/data/users/rbharatia/Genome_transcriptome_assembly/data/RNAseq_Sha"
 OUTPUT_DIR="/data/users/rbharatia/Genome_transcriptome_assembly/results/assembly/trinity_results"
 
-Trinity --seqType fq --max_memory $SLURM_MEM_PER_NODE --CPU $SLURM_CPUS_PER_TASK --left ${INPUT_DIR}/*_1.fastq.gz --right ${INPUT_DIR}/*_2.fastq.gz --output ${OUTPUT_DIR}
+Trinity --seqType fq --max_memory 64G\
+    --CPU $SLURM_CPUS_PER_TASK\
+    --left ${INPUT_DIR}/*_1.fastq.gz\
+    --right ${INPUT_DIR}/*_2.fastq.gz\
+    --output ${OUTPUT_DIR}
+
+echo "Task complete!"
